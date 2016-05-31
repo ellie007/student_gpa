@@ -1,7 +1,13 @@
 class StudentsController < ApplicationController
 
   def index
-    @students = Student.all.sort_by {|student| student.last}
+    if params[:first_name] || params[:last_name]
+      @students = Student.search(params)
+    else
+      @students = Student.all
+    end
+
+    @students = @students.sort_by {|student| student.last}
 
     respond_to do |format|
       format.html

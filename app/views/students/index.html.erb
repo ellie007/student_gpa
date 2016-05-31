@@ -1,4 +1,5 @@
 <%= render "student_search_form" %>
+<%= "No students match search term." if @students.blank? %>
 
 <table class = "table table-bordered table-striped">
   <tr>

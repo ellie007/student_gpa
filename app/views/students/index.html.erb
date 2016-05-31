@@ -1,4 +1,4 @@
-<table>
+<table class= "table table-bordered table-striped">
   <tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -7,9 +7,9 @@
 
 <% @students.each do |student| %>
   <tr>
-    <td><%= student.first%></td>
-    <td><%= student.last %></td>
-    <td><%= student.average_gpa %></td>
+    <td><%= link_to(student.first, student) %></td>
+    <td><%= link_to(student.last, student) %></td>
+    <td><%= link_to(student.average_gpa, student) %></td>
   </tr>
 <% end %>
 </table>

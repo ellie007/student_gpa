@@ -2,7 +2,7 @@
 <p><%= "Email: #{@student.email}" %></p>
 <p><%= "GPA: #{@student.average_gpa}" %></p>
 
-<table class= "table table-bordered table-striped">
+<table class = "table table-bordered table-striped">
   <tr>
     <th>Class</th>
     <th>Grade</th>
@@ -11,7 +11,7 @@
 <% @student_classes.each do |klass| %>
   <tr>
     <td><%= klass.name %></td>
-    <td><%= @student.student_classes.find_by_klass_id(klass.id).grade %></td>
+    <td><%= @student.grade_for_klass(klass) %></td>
   </tr>
 <% end %>
 </table>

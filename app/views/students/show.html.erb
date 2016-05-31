@@ -1,0 +1,17 @@
+<h2><%= "#{@student.first} #{@student.last}" %></h2>
+<p><%= "Email: #{@student.email}" %></p>
+<p><%= "GPA: #{@student.average_gpa}" %></p>
+
+<table class= "table table-bordered table-striped">
+  <tr>
+    <th>Class</th>
+    <th>Grade</th>
+  </tr>
+
+<% @student_classes.each do |klass| %>
+  <tr>
+    <td><%= klass.name %></td>
+    <td><%= @student.student_classes.find_by_klass_id(klass.id).grade %></td>
+  </tr>
+<% end %>
+</table>

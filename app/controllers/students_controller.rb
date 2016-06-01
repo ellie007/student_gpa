@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
       @students = Student.all
     end
 
-    @students = @students.sort_by {|student| student.last}
+    @students = @students.sort_by {|student| [student.last, student.first]}
 
     respond_to do |format|
       format.html

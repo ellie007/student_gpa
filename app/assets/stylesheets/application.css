@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .student_table {
+  width :50%;
+ }
+
+ .search_text_box {
+  padding-top: 25px;
+ }
+

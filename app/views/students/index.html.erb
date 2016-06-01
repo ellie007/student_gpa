@@ -1,7 +1,6 @@
-<div class="search_text_box"><%= render "student_search_form" %></div>
-<div class="search_text_box"><%= "No students match search term." if @students.blank? %></div>
+<div class="search-text-box"><%= render "student_search_form" %></div>
 
-<div class = "student_table">
+<div class = "student-table">
   <table class = "table table-bordered table-striped table-hover">
     <tr>
       <th>First Name</th>
@@ -19,3 +18,4 @@
   </table>
 </div>
 
+<div class="search-none-found-message"><%= "No students match search term." if @students.blank? %></div>

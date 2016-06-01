@@ -14,11 +14,16 @@
  *= require_self
  */
 
- .student_table {
+ .student-table {
   width :50%;
  }
 
- .search_text_box {
-  padding-top: 25px;
+ .search-text-box {
+    padding-top: 25px;
+    padding-bottom: 25px;
  }
+
+.search-none-found-message {
+  font-weight: bold;
+}
 

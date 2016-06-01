@@ -1,5 +1,5 @@
-git clone https://github.com/ellie007/student_gpa.git<br>
-run rake db:migrate<br>
-run rake db:seed<br>
-run rails server (on port: 3000)<br>
+git clone https://github.com/ellie007/student_gpa.git</br>
+run rake db:migrate</br>
+run rake db:seed</br>
+run rails server (on port: 3000)</br>
 go to your localhost

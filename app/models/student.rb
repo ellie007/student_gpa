@@ -19,9 +19,9 @@ class Student < ActiveRecord::Base
 
   def self.search(searched_field)
     db_operator = Rails.env.production? ? "ILIKE" : "LIKE"
+
     if !(searched_field[:first_name].empty?) && !(searched_field[:last_name].empty?)
       where("first #{db_operator} ? and last #{db_operator} ?", "%#{searched_field[:first_name]}%", "%#{searched_field[:last_name]}%")
-      .where(users[:name].matches("%#{user_name}%"))
     elsif !(searched_field[:first_name].empty?)
       where("first #{db_operator} ?", "%#{searched_field[:first_name]}%")
     else

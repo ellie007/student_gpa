@@ -1,18 +1,21 @@
-<%= render "student_search_form" %>
-<%= "No students match search term." if @students.blank? %>
+<div class="search_text_box"><%= render "student_search_form" %></div>
+<div class="search_text_box"><%= "No students match search term." if @students.blank? %></div>
 
-<table class = "table table-bordered table-striped">
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>GPA</th>
-  </tr>
+<div class = "student_table">
+  <table class = "table table-bordered table-striped table-hover">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>GPA</th>
+    </tr>
 
-<% @students.each do |student| %>
-  <tr>
-    <td><%= link_to(student.first, student) %></td>
-    <td><%= link_to(student.last, student) %></td>
-    <td><%= link_to(student.average_gpa, student) %></td>
-  </tr>
-<% end %>
-</table>
+  <% @students.each do |student| %>
+    <tr data-link="<%= student_path(student) %>">
+      <td><%= link_to(student.first) %></td>
+      <td><%= link_to(student.last) %></td>
+      <td><%= link_to(student.average_gpa) %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+

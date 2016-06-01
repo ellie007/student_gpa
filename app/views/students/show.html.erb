@@ -1,17 +1,19 @@
 <h2><%= "#{@student.first} #{@student.last}" %></h2>
-<p><strong><%= "Email: "%></strong> <%= @student.email %></p>
-<p><strong><%= "GPA: "%></strong> <%= @student.average_gpa %></p>
+<p><strong><%= "Email:"%></strong> <%= @student.email %></p>
+<p><strong><%= "GPA:"%></strong> <%= @student.average_gpa %></p>
 
-<table class = "table table-bordered table-striped">
-  <tr>
-    <th>Class</th>
-    <th>Grade</th>
-  </tr>
+<div class="student_table">
+  <table class = "table table-bordered table-striped">
+    <tr>
+      <th>Class</th>
+      <th>Grade</th>
+    </tr>
 
-<% @student_classes.each do |klass| %>
-  <tr>
-    <td><%= klass.name %></td>
-    <td><%= @student.grade_for_klass(klass) %></td>
-  </tr>
-<% end %>
-</table>
+  <% @student_classes.each do |klass| %>
+    <tr>
+      <td><%= klass.name %></td>
+      <td><%= @student.grade_for_klass(klass) %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

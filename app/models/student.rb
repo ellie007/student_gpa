@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
 
   def self.search(searched_field)
     if !(searched_field[:first_name].empty?) && !(searched_field[:last_name].empty?)
-      where("first LIKE ? or last LIKE ?", "%#{searched_field[:first_name]}%", "%#{searched_field[:last_name]}%")
+      where("first LIKE ? and last LIKE ?", "%#{searched_field[:first_name]}%", "%#{searched_field[:last_name]}%")
     elsif !(searched_field[:first_name].empty?)
       where("first LIKE ?", "%#{searched_field[:first_name]}%")
     else

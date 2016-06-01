@@ -1,6 +1,7 @@
-<%= form_tag(students_path, :method => "get") do %>
-<%= text_field_tag :first_name, params[:first_name], placeholder: "First Name" %>
-<%= text_field_tag :last_name, params[:last_name], placeholder: "Last Name" %>
-<%= submit_tag "Search For Student", class: :"btn btn-success"  %>
-<%= link_to "Reset", root_path, class: :"btn btn-warning" %>
+<%= form_tag(students_path, :method => "get", class: :"form-inline") do %>
+  <%= text_field_tag :first_name, params[:first_name], placeholder: "First Name", class: :"form-control" %>
+  <%= text_field_tag :last_name, params[:last_name], placeholder: "Last Name", class: :"form-control" %>
+
+  <%= submit_tag "Search For Student", class: :"btn btn-success"  %>
+  <%= link_to "Reset", root_path, class: :"btn btn-warning" %>
 <% end %>

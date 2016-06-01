@@ -10,7 +10,7 @@
     </tr>
 
   <% @students.each do |student| %>
-    <tr data-link="<%= student_path(student) %>">
+    <tr data-link= "<%= student_path(student) %>">
       <td><%= link_to(student.first) %></td>
       <td><%= link_to(student.last) %></td>
       <td><%= link_to(student.average_gpa) %></td>

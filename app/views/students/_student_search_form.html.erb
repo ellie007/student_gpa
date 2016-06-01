@@ -3,5 +3,5 @@
   <%= text_field_tag :last_name, params[:last_name], placeholder: "Last Name", class: :"form-control" %>
 
   <%= submit_tag "Search For Student", class: :"btn btn-success"  %>
-  <%= link_to "Reset", root_path, class: :"btn btn-warning" %>
+  <%= link_to "Reset", root_path, method: :get, class: :"btn btn-warning" %>
 <% end %>
